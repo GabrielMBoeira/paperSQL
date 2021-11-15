@@ -1,0 +1,25 @@
+html {
+    height: 100vh;
+}
+
+body.body {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: aquamarine;
+}
+
+main.main {
+    background-image: url('../images/paisagem.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    background-color: rgb(188, 185, 185);
+}
+
+footer.footer {
+    background-color: rgb(12, 12, 12);
+    color: #fff;
+}
