@@ -7,10 +7,13 @@ body.body {
     height: 100%;
     flex-direction: column;
     justify-content: space-between;
-    background-color: aquamarine;
 }
 
-main.main {
+/* ---------------------------------------------------
+MAIN
+--------------------------------------------------- */
+
+.main {
     background-image: url('../images/paisagem.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -19,7 +22,42 @@ main.main {
     background-color: rgb(188, 185, 185);
 }
 
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    color: #fff;
+    background-color: rgba(0,0,0,0.43);
+    margin: 30px;
+    width: 600px;
+    border-radius: 10px;
+}
+
+.content-list {
+    margin: 30px;
+}
+
+.table-content {
+    height: auto;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+/* ---------------------------------------------------
+FOOTER
+--------------------------------------------------- */
+
 footer.footer {
     background-color: rgb(12, 12, 12);
+    height: 40px;
+}
+
+.footer-content {
+    font-size: 0.9rem;
     color: #fff;
 }

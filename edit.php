@@ -1,3 +1,21 @@
+<?php
+require_once('db/conexao.php');
+
+$conn = conexao();
+
+$id = mysqli_real_escape_string($conn, $_GET['id']);
+
+$sql = "SELECT * FROM registros WHERE id = $id";
+$result = $conn->query($sql);
+
+$dados = array();
+
+while ($row = $result->fetch_assoc()) {
+     $dados = $row;
+}
+
+?>
+
 <!doctype html>
 <html lang="pt-br">
 
@@ -52,9 +70,10 @@
     </header>
     <main class="main">
         <div class="container">
-            <form class="form p-3" action="db/insert.php" method="post">
+            <form class="form p-3" action="db/update.php" method="post">
+                <input type="hidden" name="id" value="<?= $dados['id'] ?>">
                 <div class="header-form d-flex d-flex justify-content-center align-items-center mt-2">
-                    <h4><i>Cadastro</i></h4>
+                    <h4><i>Editar</i></h4>
                 </div>
                 <div class="row">
                     <div class="mt-2">
@@ -62,7 +81,7 @@
                             <label class="form-label form-label">
                                 <i>Nome</i>
                             </label>
-                            <input type="text" class="form-control" name="nome" placeholder="Digite seu nome..." required>
+                            <input type="text" class="form-control" name="nome" placeholder="Digite seu nome..." value="<?= $dados['nome'] ?>"  required>
                         </div>
                     </div>
                 </div>
@@ -70,7 +89,7 @@
                     <label class="form-label form-label">
                         <i>Idade</i>
                     </label>
-                    <input type="text" class="form-control" name="idade" placeholder="Digite sua idade..." required>
+                    <input type="text" class="form-control" name="idade" placeholder="Digite sua idade..." value="<?= $dados['idade'] ?>" required>
                 </div>
                 <div class="d-flex justify-content-end align-items-center">
                     <button class="btn btn-sm btn-primary mt-3  mr-5" name="salvar">Salvar</button>
