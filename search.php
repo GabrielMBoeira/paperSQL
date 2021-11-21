@@ -6,12 +6,14 @@ require_once('db/conexao.php');
 
 if (isset($_POST['pesquisa-search'])) {
 
-
     $nome = addslashes($_POST['nome-search']);
+
+    $nome = strtoupper($nome);
 
     $conn = Connection::connectionDB();
 
     $query = "SELECT * FROM registros WHERE nome LIKE '%$nome%' ORDER BY id DESC";
+
     $result = pg_query($query) or die('Error message: ' . pg_last_error());
 
     $dados = array();
@@ -22,6 +24,7 @@ if (isset($_POST['pesquisa-search'])) {
 
     pg_free_result($result);
     pg_close($conn);
+   
 }
 
 ?>

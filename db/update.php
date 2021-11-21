@@ -10,6 +10,9 @@ if (isset($_POST['salvar'])) {
     $nome = addslashes($_POST['nome']);
     $idade = addslashes($_POST['idade']);
 
+    $nome = strtoupper($nome);
+    $idade = strtoupper($idade);
+
     if (is_numeric($idade)) {
 
         $query = "UPDATE registros SET nome = '$nome', idade = $idade WHERE id = $id";
