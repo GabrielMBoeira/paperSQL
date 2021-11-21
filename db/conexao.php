@@ -20,6 +20,12 @@ class Connection
         return $conn_string;
     }
 
+    // *********************************************
+    // VALIDAR INSERÇÃO DE IDADE (ESTÁ ACEITANDO LETRAS)
+    // AJUSTAR LETRAS MAÍUSCULAS NA BASE PARA VISUALIZAÇÃO
+    // AJUSTAR LETRAS MAÍUSCULAS EM SEARCH
+    // *********************************************
+
 
     // //LOCALHOST
     // public static function connectionDB()

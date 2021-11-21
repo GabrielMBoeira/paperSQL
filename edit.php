@@ -22,7 +22,7 @@ if (is_numeric($id)) {
 
 <main class="main">
     <div class="container">
-        <form class="form p-3" action="db/update.php" method="post">
+        <form class="form p-3" id="frm">
             <input type="hidden" name="id" value="<?= $dado['id'] ?>">
             <div class="header-form d-flex d-flex justify-content-center align-items-center mt-2">
                 <h4><i>Editar</i></h4>
@@ -33,7 +33,7 @@ if (is_numeric($id)) {
                         <label class="form-label form-label">
                             <i>Nome</i>
                         </label>
-                        <input type="text" class="form-control" name="nome" placeholder="Digite seu nome..." value="<?= $dado['nome'] ?>" style="text-transform: uppercase;" autocomplete="off" required>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome..." value="<?= $dado['nome'] ?>" style="text-transform: uppercase;" autocomplete="off" required>
                     </div>
                 </div>
             </div>
@@ -41,14 +41,38 @@ if (is_numeric($id)) {
                 <label class="form-label form-label">
                     <i>Idade</i>
                 </label>
-                <input type="text" class="form-control" name="idade" placeholder="Digite sua idade..." value="<?= $dado['idade'] ?>" style="text-transform: uppercase;" autocomplete="off" required>
+                <input type="number" class="form-control" id="idade" name="idade" placeholder="Digite sua idade..." value="<?= $dado['idade'] ?>" style="text-transform: uppercase;" autocomplete="off" required>
             </div>
             <div class="d-flex justify-content-end align-items-center">
-                <button class="btn btn-sm btn-primary mt-3  mr-5" name="salvar">Salvar</button>
+                <button class="btn btn-sm btn-primary mt-3  mr-5" name="salvar" onclick="validaForm()">Salvar</button>
             </div>
         </form>
     </div>
 </main>
+
+<script>
+    function validaForm() {
+
+        let idade = parseInt(frm.idade.value)
+
+        if (frm.idade.value == "" || frm.nome.value == "") {
+            alert('Há campos em branco que devem ser preenchidos!')
+            return false
+
+        } else {
+
+            if (idade < 0) {
+                alert('Idade não pode ser com número negativo!')
+                return false
+            } else {
+                frm.method = 'post';
+                frm.action = 'db/update.php';
+                frm.submit();
+            }
+
+        }
+    }
+</script>
 
 <?php
 require_once('template/footer.php')

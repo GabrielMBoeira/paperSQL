@@ -45,7 +45,7 @@ pg_close($conn);
                     <?php foreach ($dados as $dado) { ?>
                         <tr>
                             <td scope="row"><?= $dado['id'] ?></td>
-                            <td class="text-truncate"><?= $dado['nome'] ?></td>
+                            <td class="text-truncate"><?= strtoupper($dado['nome']) ?></td>
                             <td class="text-truncate"><?= $dado['idade'] ?></td>
                             <td>
                                 <a href="edit.php?id=<?= $dado['id']  ?>" class="btn btn-sm btn-success">Editar</a>
