@@ -1,17 +1,15 @@
 <?php
-
-function conexao()
+class Connection
 {
-    $user = 'root';
-    $password = '';
-    $database = 'papersql';
-    $host = 'localhost';
 
-    $conn = new mysqli($host, $user, $password, $database);
+    public static function connectionDB()
+    {
+        $conn_string  = pg_connect("host=localhost dbname=papersql user=postgres password=123456");
 
-    if ($conn->connect_error) {
-        die('Erro' . $conn->connect_error);
+        if (!$conn_string) {
+            echo "Error " . pg_last_error();
+        }
+
+        return $conn_string;
     }
-
-    return $conn;
 }
