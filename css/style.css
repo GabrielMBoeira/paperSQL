@@ -31,7 +31,7 @@ MAIN
 
 .form {
     color: #fff;
-    background-color: rgba(0,0,0,0.43);
+    background-color: rgba(0, 0, 0, 0.43);
     margin: 30px;
     width: 600px;
     border-radius: 10px;
@@ -42,12 +42,11 @@ MAIN
 }
 
 .table-content {
-    height: auto;
+    height: 450px;
     width: 100%;
     background-color: #fff;
     border-radius: 10px;
-    overflow: scroll;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 /* ---------------------------------------------------
@@ -62,4 +61,25 @@ footer.footer {
 .footer-content {
     font-size: 0.9rem;
     color: #fff;
+}
+
+
+/* ---------------------------------------------------
+MOBILE
+--------------------------------------------------- */
+
+@media only screen and (max-width: 600px) {
+
+    .table-content {
+        font-size: 0.8rem;
+    }
+
+    .btn-sm {
+        font-size: 0.8rem !important;
+    }
+
+    .alert {
+        font-size: 0.8rem;
+    }
+
 }

@@ -27,6 +27,8 @@ if (isset($_POST['salvar'])) {
         }
 
         pg_close();
+    } else {
+        header('location: ../index.php');
     }
 
     //MYSQL

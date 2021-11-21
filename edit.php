@@ -33,7 +33,7 @@ if (is_numeric($id)) {
                         <label class="form-label form-label">
                             <i>Nome</i>
                         </label>
-                        <input type="text" class="form-control" name="nome" placeholder="Digite seu nome..." value="<?= $dado['nome'] ?>" required>
+                        <input type="text" class="form-control" name="nome" placeholder="Digite seu nome..." value="<?= $dado['nome'] ?>" style="text-transform: uppercase;" autocomplete="off" required>
                     </div>
                 </div>
             </div>
@@ -41,7 +41,7 @@ if (is_numeric($id)) {
                 <label class="form-label form-label">
                     <i>Idade</i>
                 </label>
-                <input type="text" class="form-control" name="idade" placeholder="Digite sua idade..." value="<?= $dado['idade'] ?>" required>
+                <input type="text" class="form-control" name="idade" placeholder="Digite sua idade..." value="<?= $dado['idade'] ?>" style="text-transform: uppercase;" autocomplete="off" required>
             </div>
             <div class="d-flex justify-content-end align-items-center">
                 <button class="btn btn-sm btn-primary mt-3  mr-5" name="salvar">Salvar</button>

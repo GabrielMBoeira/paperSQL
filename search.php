@@ -4,19 +4,25 @@ session_start();
 require_once('template/header.php');
 require_once('db/conexao.php');
 
-$conn = Connection::connectionDB();
+if (isset($_POST['pesquisa-search'])) {
 
-$query = 'SELECT * FROM registros ORDER BY id DESC';
-$result = pg_query($query) or die('Error message: ' . pg_last_error());
 
-$dados = array();
+    $nome = addslashes($_POST['nome-search']);
 
-while ($row = pg_fetch_assoc($result)) {
-    $dados[] = $row;
+    $conn = Connection::connectionDB();
+
+    $query = "SELECT * FROM registros WHERE nome LIKE '%$nome%' ORDER BY id DESC";
+    $result = pg_query($query) or die('Error message: ' . pg_last_error());
+
+    $dados = array();
+
+    while ($row = pg_fetch_assoc($result)) {
+        $dados[] = $row;
+    }
+
+    pg_free_result($result);
+    pg_close($conn);
 }
-
-pg_free_result($result);
-pg_close($conn);
 
 ?>
 
@@ -60,8 +66,6 @@ pg_close($conn);
         </div>
     </div>
 </main>
-
-
 
 <?php
 require_once('template/footer.php')

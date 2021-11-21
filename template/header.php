@@ -13,7 +13,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <span class="navbar-brand">PaperSQL</span>
+                <a href="list.php" class="navbar-brand">PaperSQL</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -26,9 +26,9 @@
                             <a class="nav-link active" aria-current="page" href="list.php">Listar</a>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Digite um nome" aria-label="Search">
-                        <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
+                    <form class="d-flex" action="search.php" method="post">
+                        <input class="form-control me-2" type="search" name="nome-search" placeholder="Pesquise um nome.." aria-label="Search" style="text-transform: uppercase;" autocomplete="off">
+                        <button class="btn btn-sm btn-outline-primary" name="pesquisa-search" type="submit">Pesquisar</button>
                     </form>
                 </div>
             </div>
