@@ -12,12 +12,34 @@ $id = addslashes($_GET['id']);
 
 if (is_numeric($id)) {
 
-    $query = "SELECT * FROM registros WHERE id = $id";
+    // $query = "SELECT * FROM registros WHERE id = $id";
+    $query = "
+            select r.id, r.nome, r.idade, c.nome as cidade from registros r
+                join cidades c
+                on r.id_cidade = c.id
+                where r.id = $id
+                ORDER BY r.id DESC
+            ";
     $result = pg_query($query) or die('Error message: ' . pg_last_error());
     $dado = pg_fetch_assoc($result);
     pg_free_result($result);
     pg_close($conn);
 }
+
+$conn = Connection::connectionDB();
+
+$sql = "SELECT * FROM cidadesS ORDER BY nome ASC";
+$res = pg_query($sql) or die('Error message: ' . pg_last_error());
+
+$cids = array();
+
+while ($rows = pg_fetch_assoc($res)) {
+    $cids[] = $rows;
+}
+
+pg_free_result($res);
+pg_close($conn);
+
 ?>
 
 <main class="main">
@@ -42,6 +64,19 @@ if (is_numeric($id)) {
                     <i>Idade</i>
                 </label>
                 <input type="number" class="form-control" id="idade" name="idade" placeholder="Digite sua idade..." value="<?= $dado['idade'] ?>" style="text-transform: uppercase;" autocomplete="off" required>
+            </div>
+            <div class="mt-2">
+                <label class="form-label form-label">
+                    <i>Cidades</i>
+                </label>
+                <select class="form-select" name="id_cidade" required>
+                    <option value="<?= $dado['id']; ?>"><?= $dado['cidade']; ?></option>
+
+                    <?php foreach ($cids as $cid) { ?>
+                        <option value="<?= $cid['id']; ?>"><?= $cid['nome']; ?></option>
+                    <?php } ?>
+
+                </select>
             </div>
             <div class="d-flex justify-content-end align-items-center">
                 <button class="btn btn-sm btn-primary mt-3  mr-5" name="salvar" onclick="validaForm()">Salvar</button>

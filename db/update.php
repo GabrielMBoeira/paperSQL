@@ -8,14 +8,13 @@ if (isset($_POST['salvar'])) {
     //POSTGRESQL
     $id = addslashes($_POST['id']);
     $nome = addslashes($_POST['nome']);
-    $idade = addslashes($_POST['idade']);
-
     $nome = strtoupper($nome);
-    $idade = strtoupper($idade);
+    $idade = addslashes($_POST['idade']);
+    $id_cidade = addslashes($_POST['id_cidade']);
 
     if (is_numeric($idade)) {
 
-        $query = "UPDATE registros SET nome = '$nome', idade = $idade WHERE id = $id";
+        $query = "UPDATE registros SET nome = '$nome', idade = $idade, id_cidade = $id_cidade WHERE id = $id";
 
         $conn = Connection::connectionDB();
 

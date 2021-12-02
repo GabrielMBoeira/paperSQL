@@ -11,13 +11,15 @@ if (isset($_POST['salvar'])) {
     //POSTGRESQL
     $nome = addslashes($_POST['nome']);
     $idade = addslashes($_POST['idade']);
+    $id_cidade = addslashes($_POST['id_cidade']);
 
     $nome = strtoupper($nome);
     $idade = strtoupper($idade);
+    $id_cidade = strtoupper($id_cidade);
 
     if (is_numeric($idade)) {
 
-        $query = "INSERT INTO registros (nome, idade) VALUES ('$nome', $idade)";
+        $query = "INSERT INTO registros (nome, idade, id_cidade) VALUES ('$nome', $idade, $id_cidade)";
 
         $conn = Connection::connectionDB();
 
@@ -25,7 +27,7 @@ if (isset($_POST['salvar'])) {
             $_SESSION['mensagem'] = '<div class="alert alert-primary" role="alert">Registro inserido com sucesso!</div>';
             header('location: ../list.php');
         } else {
-            $_SESSION['mensagem'] = '<div class="alert alert-danger" role="alert">Erro ao inserir!</div>';
+            $_SESSION['mensagem'] = '<div class="alert alert-danger" role="alert">Erro ao inserir o cadastro do aluno!</div>';
             header('location: ../list.php');
         }
 

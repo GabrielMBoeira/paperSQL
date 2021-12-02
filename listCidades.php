@@ -6,13 +6,7 @@ require_once('db/conexao.php');
 
 $conn = Connection::connectionDB();
 
-$query = "
-        select r.id, r.nome, r.idade, c.nome as cidade from registros r
-        join cidades c
-        on r.id_cidade = c.id
-        ORDER BY r.id DESC    
-        ";
-
+$query = 'SELECT * FROM cidades ORDER BY nome ASC';
 $result = pg_query($query) or die('Error message: ' . pg_last_error());
 
 $dados = array();
@@ -41,10 +35,7 @@ pg_close($conn);
                 <thead>
                     <tr>
                         <th scope="col"><i>ID</i></th>
-                        <th scope="col"><i>Nome</i></th>
-                        <th scope="col"><i>Idade</i></th>
                         <th scope="col"><i>Cidade</i></th>
-                        <th scope="col"><i>Editar</i></th>
                         <th scope="col"><i>Deletar</i></th>
                     </tr>
                 </thead>
@@ -53,13 +44,8 @@ pg_close($conn);
                         <tr>
                             <td class="dado" scope="row" style=" vertical-align: middle;"><?= $dado['id'] ?></td>
                             <td class="text-truncate dado" style=" vertical-align: middle;"><?= strtoupper($dado['nome']) ?></td>
-                            <td class="text-truncate dado" style=" vertical-align: middle;"><?= $dado['idade'] ?></td>
-                            <td class="text-truncate dado" style=" vertical-align: middle;"><?= $dado['cidade'] ?></td>
                             <td>
-                                <a href="edit.php?id=<?= $dado['id']  ?>" class="btn btn-sm btn-success" style=" vertical-align: middle;">Editar</a>
-                            </td>
-                            <td>
-                                <a href="db/delete.php?id=<?= $dado['id'] ?>" name="deletar" class="btn btn-sm btn-danger" style=" vertical-align: middle;">Deletar</a>
+                                <a href="db/deleteCidade.php?id=<?= $dado['id'] ?>" name="deletar" class="btn btn-sm btn-danger" style=" vertical-align: middle;">Deletar</a>
                             </td>
                         </tr>
                     <?php } ?>

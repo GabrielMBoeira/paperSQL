@@ -40,7 +40,7 @@ if (isset($_POST['pesquisa-search'])) {
             ?>
         </div>
         <div class="table-content table-scrollable">
-            <table class="table table-striped table-responsive">
+            <table class="table table-striped table-responsive text-light">
                 <thead>
                     <tr>
                         <th scope="col"><i>ID</i></th>
@@ -53,9 +53,9 @@ if (isset($_POST['pesquisa-search'])) {
                 <tbody>
                     <?php foreach ($dados as $dado) { ?>
                         <tr>
-                            <td scope="row"><?= $dado['id'] ?></td>
-                            <td class="text-truncate"><?= $dado['nome'] ?></td>
-                            <td class="text-truncate"><?= $dado['idade'] ?></td>
+                            <td scope="row" class="dado"><?= $dado['id'] ?></td>
+                            <td class="text-truncate dado"><?= $dado['nome'] ?></td>
+                            <td class="text-truncate dado"><?= $dado['idade'] ?></td>
                             <td>
                                 <a href="edit.php?id=<?= $dado['id']  ?>" class="btn btn-sm btn-success">Editar</a>
                             </td>

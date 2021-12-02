@@ -1,5 +1,20 @@
 <?php
-require_once('template/header.php')
+require_once('template/header.php');
+require_once('db/conexao.php');
+
+$conn = Connection::connectionDB();
+
+$query = 'SELECT * FROM cidades ORDER BY nome ASC';
+$result = pg_query($query) or die('Error message: ' . pg_last_error());
+
+$dados = array();
+
+while ($row = pg_fetch_assoc($result)) {
+   $dados[] = $row;
+}
+
+pg_free_result($result);
+pg_close($conn);
 ?>
 
 <main class="main">
@@ -24,6 +39,17 @@ require_once('template/header.php')
             </label>
             <input type="number" class="form-control" id="idade" name="idade" placeholder="Digite sua idade..." style="text-transform: uppercase;" autocomplete="off" required>
          </div>
+         <div class="mt-2">
+            <label class="form-label form-label">
+               <i>Cidades</i>
+            </label>
+            <select class="form-select" name="id_cidade" required>
+               <option value="">Selecione uma cidade</option>
+               <?php foreach ($dados as $dado) { ?>
+                  <option value="<?= $dado['id'];?>"><?= $dado['nome']; ?></option>
+               <?php } ?>
+            </select>
+         </div>
          <div class="d-flex justify-content-end align-items-center">
             <button class="btn btn-sm btn-primary mt-3  mr-5" name="salvar" onclick="validaForm()">Salvar</button>
          </div>
@@ -36,7 +62,7 @@ require_once('template/header.php')
 
       let idade = parseInt(frm.idade.value)
 
-      if (frm.idade.value == "" || frm.nome.value == "") {
+      if (frm.idade.value == "" || frm.nome.value == "" || frm.id_cidade.value == "") {
          alert('Há campos em branco que devem ser preenchidos!')
          return false
 
@@ -50,7 +76,6 @@ require_once('template/header.php')
             frm.action = 'db/insert.php';
             frm.submit();
          }
-
       }
    }
 </script>
