@@ -21,6 +21,8 @@ while ($row = pg_fetch_assoc($result)) {
     $dados[] = $row;
 }
 
+
+
 pg_free_result($result);
 pg_close($conn);
 

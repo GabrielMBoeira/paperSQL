@@ -12,7 +12,6 @@ $id = addslashes($_GET['id']);
 
 if (is_numeric($id)) {
 
-    // $query = "SELECT * FROM registros WHERE id = $id";
     $query = "
             select r.id, r.nome, r.idade, c.nome as cidade from registros r
                 join cidades c
@@ -28,7 +27,7 @@ if (is_numeric($id)) {
 
 $conn = Connection::connectionDB();
 
-$sql = "SELECT * FROM cidadesS ORDER BY nome ASC";
+$sql = "SELECT * FROM cidades WHERE nome <> '" . $dado['cidade'] . "' ORDER BY nome ASC";
 $res = pg_query($sql) or die('Error message: ' . pg_last_error());
 
 $cids = array();
@@ -73,7 +72,11 @@ pg_close($conn);
                     <option value="<?= $dado['id']; ?>"><?= $dado['cidade']; ?></option>
 
                     <?php foreach ($cids as $cid) { ?>
-                        <option value="<?= $cid['id']; ?>"><?= $cid['nome']; ?></option>
+                        <option value="<?= $cid['id']; ?>">
+                            <?php
+                                print_r($cid['nome']);
+                            ?>
+                        </option>
                     <?php } ?>
 
                 </select>

@@ -20,7 +20,7 @@ pg_close($conn);
 
 ?>
 
-<main class="main">
+<main class="main-city-list">
     <div class="p-3">
         <div class="mensagem d-flex justify-content-center align-items-center mb-3">
             <?php
@@ -30,7 +30,7 @@ pg_close($conn);
             }
             ?>
         </div>
-        <div class="table-content table-scrollable">
+        <div class="table-city-list table-scrollable">
             <table class="table table-striped table-responsive text-light">
                 <thead>
                     <tr>
