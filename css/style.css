@@ -12,106 +12,22 @@ body.body {
 /* ---------------------------------------------------
 MAIN
 --------------------------------------------------- */
-
 .main {
-    background-image: url('../images/icondatabase.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: rgb(66, 214, 255);
     height: 100%;
-    background-color: rgb(188, 185, 185);
+  
 }
 
-.main-city-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('../images/icondatabase.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    background-color: rgb(188, 185, 185);
-}
-
-.container {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav-link:hover {
-    font-weight: 700;
-    color: rgb(5, 6, 48) !important;
-}
-
-.form {
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.8);
-    margin: 30px;
-    width: 600px;
-    border-radius: 10px;
-}
-
-.content-list {
-    margin: 30px;
-}
-
-.table-content {
-    height: 450px;
-    width: 100%;
-    color: #fff;
-    background-color: RGBA(0,0,0,0.79);
-    border-radius: 10px;
-    overflow-y: scroll;
-}
-
-.table-city-list {
-    height: 450px;
-    width: 500px;
-    color: #fff;
-    background-color: RGBA(0,0,0,0.79);
-    border-radius: 10px;
-    overflow-y: scroll;
-}
-
-.dado {
-    color: #fff !important;
-}
-
-
-/* ---------------------------------------------------
-FOOTER
---------------------------------------------------- */
-
-footer.footer {
-    background-color: rgb(12, 12, 12);
-    height: 40px;
-}
-
-.footer-content {
-    font-size: 0.9rem;
+.footer {
+    background-color: #000;
     color: #fff;
 }
 
 
 /* ---------------------------------------------------
-MOBILE
+MOBILE DEVICE
 --------------------------------------------------- */
-
 @media only screen and (max-width: 600px) {
 
-    .table-content {
-        font-size: 0.8rem;
-    }
-
-    .btn-sm {
-        font-size: 0.8rem !important;
-    }
-
-    .alert {
-        font-size: 0.8rem;
-    }
 
 }
