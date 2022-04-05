@@ -9,13 +9,53 @@ body.body {
     justify-content: space-between;
 }
 
+
 /* ---------------------------------------------------
 MAIN
 --------------------------------------------------- */
+
 .main {
-    background-color: rgb(66, 214, 255);
+    background-image: url('../images/_clock.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     height: 100%;
-  
+}
+
+main .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .content {
+    color: rgb(233, 20, 20);
+    height: 80%;
+    width: 80%;
+}
+
+main .partition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .content-clock {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .clock {
+    /* background-color: #fff; */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
 }
 
 .footer {
@@ -27,7 +67,5 @@ MAIN
 /* ---------------------------------------------------
 MOBILE DEVICE
 --------------------------------------------------- */
-@media only screen and (max-width: 600px) {
 
-
-}
+@media only screen and (max-width: 600px) {}
