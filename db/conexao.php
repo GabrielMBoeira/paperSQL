@@ -1,20 +1,18 @@
 <?php
 class Connection
 {
-    public static function connectionDB()
+    public static function connectionDB($banco = 'heroku_afaee45df8121f9')
     {
-        $host = 'ec2-35-168-80-116.compute-1.amazonaws.com';
-        $dbname = 'da889bcon6gnub';
-        $user = 'lntmtgamotyunl';
-        $password = '1e70574a7481af5a2af733f4c5bf33372b060881e494b3523abbbe88ac09a62f';
-        $port = '5432';
+        $servidor = 'us-cdbr-east-05.cleardb.net';
+        $usuario = 'bf39d95a717b31';
+        $senha = '4d38de20';
 
-        $conn_string  = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
+        $conn = new mysqli($servidor, $usuario, $senha, $banco);
 
-        if (!$conn_string) {
-            echo "Error " . pg_last_error();
+        if ($conn->connect_error) {
+            die('Erro: ' . $conn->connect_error);
         }
 
-        return $conn_string;
+        return $conn;
     }
 }
