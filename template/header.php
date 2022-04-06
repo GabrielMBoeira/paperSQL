@@ -9,7 +9,7 @@
     <title>Paper SQL</title>
 </head>
 
-<body class="body">
+<body class="background">
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
@@ -25,7 +25,7 @@
                     </ul>
                     <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Digite seu nome..." aria-label="Search">
-                        <button class="btn  btn-sm btn-outline-primary" type="submit">Pesquisar</button>
+                        <button class="btn  btn-sm btn-primary" type="submit">Pesquisar</button>
                     </form>
                 </div>
             </div>

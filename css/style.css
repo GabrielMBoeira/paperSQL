@@ -1,72 +1,130 @@
-html {
-    height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+* {
+    padding: 0;
+    margin: 0;
 }
 
-body.body {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-
-/* ---------------------------------------------------
-MAIN
---------------------------------------------------- */
-
-.main {
-    background-image: url('../images/relogio.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
+.background {
+    background-image: url('../images/wallpaper.png');
     background-size: cover;
-    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
-main .container {
-    height: 100%;
+.btn1 {
+    background-color: #B62FDE;
+    padding: 25px 40px 25px 40px;
+    font-size: 30px;
+    border-radius: 40px;
+    border: 3px solid white;
+    color: white;
+    font-family: 'Passion One', cursive;
+}
+
+.btn2 {
+    background-color: #3783F5;
+    padding: 25px 36px 25px 36px;
+    font-size: 30px;
+    border-radius: 40px;
+    border: 3px solid white;
+    color: white;
+    font-family: 'Passion One', cursive;
+}
+
+.div1 {
+    width: 400px;
+    height: 150px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    left: 0;
+}
+
+.div2 {
+    width: 400px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    right: 0;
+}
+
+.cont {
+    width: 80vw;
+    height: 90vh;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+button:hover {
+    animation-name: hover_btn;
+    animation-duration: 0.3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.52);
+}
+
+.clock-content {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main .content {
-    height: 30%;
-    width: 70%;
-}
-
-main .partition {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-main .content-clock {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-main .clock {
-    /* background-color: #fff; */
+.clock {
     color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 3rem;
-    font-weight: 700;
-    width: 150px;
+    font-weight: 900;
 }
-
-
-/* ---------------------------------------------------
-FOOTER
---------------------------------------------------- */
 
 .footer {
     background-color: #000;
-    font-size: 0.8rem;
     color: #fff;
+}
+
+@keyframes hover_btn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+@media(max-width:970px) {
+    .background {
+        background-image: url('../images/wallpaper-mob.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .div1 {
+        position: absolute;
+        display: flex;
+        height: 200px;
+        top: 30px;
+        bottom: auto;
+        left: calc(50% - 200px);
+        right: auto;
+    }
+    .div2 {
+        position: absolute;
+        display: flex;
+        height: 200px;
+        top: auto;
+        bottom: 30px;
+        left: auto;
+        right: calc(50% - 200px);
+    }
+    .cont {
+        position: relative;
+        max-width: 500px;
+        text-align: center;
+    }
 }

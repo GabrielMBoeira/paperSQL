@@ -1,6 +1,6 @@
 function relogio() {
     let data = new Date();
-    let tempo = document.getElementById("relogio_id");
+    let tempo = document.getElementById("clock");
 
     tempo.innerHTML = data.toLocaleTimeString();
 }

@@ -3,25 +3,19 @@ require_once('template/header.php');
 require_once('db/conexao.php');
 ?>
 
-<main class="main">
-    <div class="container">
-        <div class="row content">
-            <div class="col-md-6 partition">
-                <button class="btn btn-danger m-1">Agendar horário</button>
-            </div>
-            <div class="col-md-6 partition">
-                <button class="btn btn-primary m-1">Consultar horário</button>
-            </div>
-
-            <div class="content-clock">
-                <div class="clock">
-                    <div id="relogio_id"></div>
-                </div>
-            </div>
-
+<div class="cont">
+ 
+        <div class="clock-content">
+            <div class="clock" id="clock"></div>
         </div>
-    </div>
-</main>
+        <div class="div1">
+            <button class="btn1">Agendar Horário</button>
+        </div>
+        <div class="div2">
+            <button class="btn2">Consultar Horário</button>
+        </div>
+</div>
+
 
 <script src="js/function.js"></script>
 
