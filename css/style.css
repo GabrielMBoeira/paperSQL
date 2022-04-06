@@ -15,7 +15,7 @@ MAIN
 --------------------------------------------------- */
 
 .main {
-    background-image: url('../images/rel_clock.jpg');
+    background-image: url('../images/relogio.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -31,9 +31,8 @@ main .container {
 }
 
 main .content {
-    color: rgb(233, 20, 20);
-    height: 80%;
-    width: 80%;
+    height: 30%;
+    width: 70%;
 }
 
 main .partition {
@@ -43,7 +42,8 @@ main .partition {
 }
 
 main .content-clock {
-    width: 80%;
+    width: 100%;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,17 +55,18 @@ main .clock {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
-}
-
-.footer {
-    background-color: #000;
-    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    width: 150px;
 }
 
 
 /* ---------------------------------------------------
-MOBILE DEVICE
+FOOTER
 --------------------------------------------------- */
 
-@media only screen and (max-width: 600px) {}
+.footer {
+    background-color: #000;
+    font-size: 0.8rem;
+    color: #fff;
+}

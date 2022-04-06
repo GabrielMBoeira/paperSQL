@@ -1,6 +1,6 @@
 <footer class="footer d-flex justify-content-end align-items-center">
         <div class="footer-content m-3">
-            Uniasselvi Team &copy;
+            Uniasselvi Team <?= date('Y')?> &copy;
         </div>
     </footer>
 
