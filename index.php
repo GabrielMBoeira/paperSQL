@@ -5,8 +5,10 @@
 <div class="cont">
     <!-- Importação de template cabeçaalho -->
     <?php require_once('template/header.php'); ?>
+
+    EM MANUTENÇÃO
     
-    <div class="clock-content">
+    <!-- <div class="clock-content">
         <div class="clock" id="clock"></div>
     </div>
     
@@ -18,7 +20,7 @@
         <div class="div2">
             <button class="btn2 ">Consultar Horário</button>
         </div>
-    </div>
+    </div> -->
     
     <!-- Importação de template rodapé -->
     <?php require_once('template/footer.php') ?>
