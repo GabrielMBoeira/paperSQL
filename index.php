@@ -1,30 +1,15 @@
 <?php
-// require_once('db/conexao.php');
+require_once('template/header.php');
 ?>
 
-<div class="cont">
-    <!-- Importação de template cabeçaalho -->
-    <?php require_once('template/header.php'); ?>
+<link rel="stylesheet" href="css/style.css">
 
-    EM MANUTENÇÃO
-    
-    <!-- <div class="clock-content">
-        <div class="clock" id="clock"></div>
+<main>
+    <div class="content-form text-light">
+        Em manutenção
     </div>
-    
-    <div class="content-center">
-        <div class="div1">
-            <button class="btn1">teste</button>
-        </div>
-        
-        <div class="div2">
-            <button class="btn2 ">Consultar Horário</button>
-        </div>
-    </div> -->
-    
-    <!-- Importação de template rodapé -->
-    <?php require_once('template/footer.php') ?>
-</div>
+</main>
 
-
-<script src="js/function.js"></script>
+<?php
+require_once('template/footer.php');
+?>

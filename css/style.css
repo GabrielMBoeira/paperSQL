@@ -9,7 +9,10 @@ html {
 }
 
 body {
-    height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .background {
@@ -19,123 +22,23 @@ body {
     background-position: center center;
 }
 
-.btn1 {
-    background-color: #B62FDE;
-    padding: 25px 40px 25px 40px;
-    font-size: 30px;
-    border-radius: 40px;
-    border: 3px solid white;
-    color: white;
-    font-family: 'Passion One', cursive;
-}
-
-.btn2 {
-    background-color: #3783F5;
-    padding: 25px 36px 25px 36px;
-    font-size: 30px;
-    border-radius: 40px;
-    border: 3px solid white;
-    color: white;
-    font-family: 'Passion One', cursive;
-}
-
-.div1 {
-    margin-right: 180px;
-}
-
-.div2 {
-    margin-left: 180px;
-}
-
-.cont {
+main {
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.content-center {
-    margin-top: 100px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-}
-
-button:hover {
-    animation-name: hover_btn;
-    animation-duration: 0.3s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.52);
-}
-
-.clock-content {
-    margin-top: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.clock {
+.content-form {
+    width: 900px;
+    background-color: RGBA(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 60px 40px;
     color: #fff;
-    font-size: 3rem;
-    font-weight: 900;
+    font-weight: 600;
 }
 
 .footer {
     background-color: #000;
     color: #fff;
-}
-
-@keyframes hover_btn {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.05);
-    }
-}
-
-@media(max-width:970px) {
-    .content-center {
-        display: flex;
-        flex-direction: column;
-    }
-    .btn1 {
-        background-color: #B62FDE;
-        padding: 25px 40px 25px 40px;
-        font-size: 20px;
-        border-radius: 40px;
-        border: 3px solid white;
-        color: white;
-        font-family: 'Passion One', cursive;
-    }
-    .btn2 {
-        background-color: #3783F5;
-        padding: 25px 36px 25px 36px;
-        font-size: 20px;
-        border-radius: 40px;
-        border: 3px solid white;
-        color: white;
-        font-family: 'Passion One', cursive;
-    }
-    .div1 {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 0px;
-        margin-top: -100px;
-    }
-    .div2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 0px;
-        margin-top: 50px;
-    }
-    .clock {
-        font-size: 2.5rem;
-    }
 }
