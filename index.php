@@ -12,7 +12,7 @@
     
     <div class="content-center">
         <div class="div1">
-            <button class="btn1">Agendar Horário</button>
+            <button class="btn1">teste</button>
         </div>
         
         <div class="div2">
