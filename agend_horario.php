@@ -24,11 +24,11 @@ require_once('template/header.php');
                     <option>...</option>
                 </select>
             </div>
-            <div class="col-12">
+            <div class="col-md-12">
                 <label for="nome" class="form-label">Nome:</label>
                 <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
             </div>
-            <div class="col-8">
+            <div class="col-md-8">
                 <label for="cpf" class="form-label">CPF:</label>
                 <input type="text" class="form-control" id="cpf" placeholder="Digite seu CPF">
             </div>
