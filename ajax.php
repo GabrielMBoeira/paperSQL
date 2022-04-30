@@ -14,7 +14,7 @@ $stmt->execute();
 
 $result = $stmt->get_result();
 
-$dados = [];
+$dados = array();
 
 if ($result->num_rows > 0 ) {
    
