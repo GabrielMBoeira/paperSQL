@@ -9,6 +9,7 @@ html {
 }
 
 body {
+<<<<<<< HEAD
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -16,15 +17,24 @@ body {
 }
 
 main {
+=======
+    height: 100vh;
+}
+
+.background {
+>>>>>>> dd368ef5e26bea693adcd461cb960431f942a45b
     background-image: url('../images/wallpaper.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+<<<<<<< HEAD
     height: calc(100% - 40px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+=======
+>>>>>>> dd368ef5e26bea693adcd461cb960431f942a45b
 }
 
 .btn1 {
@@ -47,6 +57,7 @@ main {
     font-family: 'Passion One', cursive;
 }
 
+<<<<<<< HEAD
 .content-center {
     margin-top: 100px;
     height: 280px;
@@ -54,6 +65,8 @@ main {
     justify-content: center;
 }
 
+=======
+>>>>>>> dd368ef5e26bea693adcd461cb960431f942a45b
 .div1 {
     margin-right: 180px;
 }
@@ -62,6 +75,7 @@ main {
     margin-left: 180px;
 }
 
+<<<<<<< HEAD
 .content-clock {
     margin-top: 150px;
     width: 100%;
@@ -74,6 +88,20 @@ main {
     color: #fff;
     font-size: 3rem;
     font-weight: 900;
+=======
+.cont {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content-center {
+    margin-top: 100px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+>>>>>>> dd368ef5e26bea693adcd461cb960431f942a45b
 }
 
 button:hover {
@@ -85,8 +113,25 @@ button:hover {
     box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.52);
 }
 
+<<<<<<< HEAD
 .footer {
     height: 40px;
+=======
+.clock-content {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.footer {
+>>>>>>> dd368ef5e26bea693adcd461cb960431f942a45b
     background-color: #000;
     color: #fff;
 }
@@ -101,6 +146,7 @@ button:hover {
 }
 
 @media(max-width:970px) {
+<<<<<<< HEAD
     .div1 {
         display: flex;
         justify-content: center;
@@ -119,11 +165,20 @@ button:hover {
         display: flex;
         flex-direction: column;
         margin-top: 20px;
+=======
+    .content-center {
+        display: flex;
+        flex-direction: column;
+>>>>>>> dd368ef5e26bea693adcd461cb960431f942a45b
     }
     .btn1 {
         background-color: #B62FDE;
         padding: 25px 40px 25px 40px;
+<<<<<<< HEAD
         font-size: 25px;
+=======
+        font-size: 20px;
+>>>>>>> dd368ef5e26bea693adcd461cb960431f942a45b
         border-radius: 40px;
         border: 3px solid white;
         color: white;
@@ -132,14 +187,35 @@ button:hover {
     .btn2 {
         background-color: #3783F5;
         padding: 25px 36px 25px 36px;
+<<<<<<< HEAD
         font-size: 25px;
+=======
+        font-size: 20px;
+>>>>>>> dd368ef5e26bea693adcd461cb960431f942a45b
         border-radius: 40px;
         border: 3px solid white;
         color: white;
         font-family: 'Passion One', cursive;
     }
+<<<<<<< HEAD
     .content-clock {
         margin-top: 0px;
+=======
+    .div1 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0px;
+        margin-top: -100px;
+    }
+    .div2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0px;
+        margin-top: 50px;
+>>>>>>> dd368ef5e26bea693adcd461cb960431f942a45b
     }
     .clock {
         font-size: 2.5rem;
