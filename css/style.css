@@ -12,6 +12,7 @@ body {
     height: 100vh;
 }
 
+
 .background {
     background-image: url('../images/wallpaper.png');
     background-size: cover;
@@ -138,4 +139,5 @@ button:hover {
     .clock {
         font-size: 2.5rem;
     }
+    
 }

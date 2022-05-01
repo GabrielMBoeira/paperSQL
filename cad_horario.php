@@ -2,6 +2,7 @@
 require_once('template/header.php');
 ?>
 
+
 <link rel="stylesheet" href="css/cad_horario.css">
 
 <main>
@@ -27,4 +28,5 @@ require_once('template/header.php');
 
 <?php
 require_once('template/footer.php');
+
 ?>

@@ -12,11 +12,11 @@
     
     <div class="content-center">
         <div class="div1">
-            <button class="btn1">Agendar Horário</button>
+            <a href="agendar.php"><button class="btn1">Agendar Horário</button></a>
         </div>
         
         <div class="div2">
-            <button class="btn2 ">Consultar Horário</button>
+        <a href="consultar-hr.php"> <button class="btn2 ">Consultar Horário</button></a>
         </div>
     </div>
     

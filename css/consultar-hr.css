@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+table{
+    width: 90%;
+    border-collapse: collapse;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+td{
+    /* border: 1px solid black; */
+    padding: 10px;
+    text-align: center;  
+}
+tr:nth-child(even){
+    background-color: rgb(33, 37, 41);
+    color: white;
+}
+tr:nth-child(odd){
+    background-color: #2C3034;
+    color: white;
+}
+caption{
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+    background-color: rgb(44, 48, 52);
+    color: white;
+    /* border-radius: 10px 10px 0  0; */
+    
+}
+/* tfoot > tr > td {
+    border-radius: 0 0 10px 10px;
+} */
+.table-round-corner {
+    margin-top: 15px;
+    text-align: center;
+    overflow:hidden;
+    border-collapse:collapse;
+    border: solid rgb(46, 46, 46) 1px;
+    border-radius: 15px;
+}
+.ft{
+    background-color: rgb(44, 48, 52);
+    color: rgb(5, 5, 5);
+    color: white;
+}
+.title{
+    background-color: rgb(44, 48, 52);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.ipt1{
+    padding: 13px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 1px transparent;
+    background-color: #2C3034;
+    color-scheme: dark;
+    color: white;
+}
+.ipt2{
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 1px transparent;
+    background-color: #2C3034;
+    color-scheme: dark;
+    color: white;
+}
+.inputs{
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    /* background-color: aliceblue; */
+    
+}
+.btn{
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    border: 1px transparent;
+    background-color: #4D96FF;
+    font-weight: bold;
+    color: white;
+
+}
+#background{
+    background-image: url(../images/background-consular-hor.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100wh;
+    height: 100vh;
+}
+
+.back-table{
+    /* position: absolute; */
+    
+    padding: 30px;
+    width: 70%;
+    border: 1px transparent;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.492);  
+    backdrop-filter: blur(4px);   
+    
+    position: absolute;
+    z-index: 99999999;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+.cont-table{
+    /* background-color: rgb(0, 0, 255); */
+    max-width: 1100px;
+    height: 100vh;
+    margin: auto;
+    position: relative;
+    /* background-color: #4D96FF; */
+
+}
+.over{
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+
+.btn:hover{
+    animation-name: hover_btn;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    border: 1px solid white;
+}
+.btn:active{
+    animation-name: hover_act;
+    animation-duration: 0.3s;
+    transform: scale(0.95);
+    animation-timing-function: ease-in-out;
+    border: 1px solid white;
+}
+@media (max-width: 480px){
+    .back-table{
+        /* position: absolute; */
+        
+        width: 100%;
+        padding: 0;
+        padding-top: 10px;
+        overflow-x: auto;   
+    }
+    table{
+        width: 100%;
+    }
+    .table-round-corner {
+        border-radius: 0px;
+    }
+    .back-table{
+        height: 100%;
+        border-radius: 0px;
+        position: absolute;
+        z-index:0;
+        left: 50%; top: 0;
+        transform: translate(-50%, 0%);
+    }
+    .inputs{
+        width: 100%;
+    }
+}
