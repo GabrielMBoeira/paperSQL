@@ -21,6 +21,7 @@ main {
     height: 100vh;
 }
 
+
 .background {
 >>>>>>> dd368ef5e26bea693adcd461cb960431f942a45b
     background-image: url('../images/wallpaper.png');
@@ -220,4 +221,5 @@ button:hover {
     .clock {
         font-size: 2.5rem;
     }
+    
 }

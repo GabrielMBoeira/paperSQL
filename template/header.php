@@ -11,7 +11,7 @@
     <title>Paper SQL</title>
 </head>
 
-<body class="background" onload="relogio()">
+<body id="background" class="background" onload="relogio()">
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
