@@ -11,7 +11,7 @@ require_once('template/header.php');
 
     <div class="content-center">
         <div class="div1">
-            <a href="agendar.php"><button class="btn1">Agendar Horário</button></a>
+            <a href="agendar.php"><button class="btn1">Agendar Horárioz</button></a>
         </div>
 
         <div class="div2">
