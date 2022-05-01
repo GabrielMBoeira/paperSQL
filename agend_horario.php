@@ -55,7 +55,7 @@ $result = $stmt->get_result();
             </div>
             <div class="col-md-8">
                 <label for="cpf" class="form-label">CPF:</label>
-                <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Digite seu CPF...">
+                <input type="text" size="14" maxlength="14"  class="form-control" id="cpf"  placeholder="Digite seu CPF" onkeypress="mascara_cpf()">
             </div>
             <div class="content-button d-flex justify-content-end">
                 <button class="btn btn-primary" name="salvar" onclick="return validarForm()">Salvar</button>
@@ -63,6 +63,7 @@ $result = $stmt->get_result();
         </form>
     </div>
 </main>
+
 
 <?php
 require_once('template/footer.php');

@@ -11,15 +11,11 @@ require_once('template/header.php');
 
     <div class="content-center">
         <div class="div1">
-            <a href="agend_horario.php">
-                <button class="btn1">Agendar Horário</button>
-            </a>
+            <a href="agendar.php"><button class="btn1">Agendar Horário</button></a>
         </div>
 
         <div class="div2">
-            <a href="agenda.php">
-                <button class="btn2">Consultar Horário</button>
-            </a>
+        <a href="consultar-hr.php"> <button class="btn2 ">Consultar Horário</button></a>
         </div>
     </div>
 </main>
@@ -30,3 +26,4 @@ require_once('template/footer.php');
 
 <script src="js/function.js"></script>
 
+<script src="js/function.js"></script>
