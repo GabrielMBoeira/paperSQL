@@ -15,26 +15,14 @@ body {
     justify-content: space-between;
 }
 
-<<<<<<< HEAD
 main {
-=======
-.background {
->>>>>>> dd368ef5e26bea693adcd461cb960431f942a45b
     background-image: url('../images/wallpaper.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-<<<<<<< HEAD
     height: calc(100% - 40px);
     display: flex;
     flex-direction: column;
-=======
-}
-
-main {
-    height: 100%;
-    display: flex;
->>>>>>> dd368ef5e26bea693adcd461cb960431f942a45b
     justify-content: center;
     align-items: center;
 }
@@ -48,7 +36,7 @@ main {
     font-weight: 600;
 }
 
-<<<<<<< HEAD
+
 button:hover {
     animation-name: hover_btn;
     animation-duration: 0.3s;
@@ -83,13 +71,10 @@ button:hover {
         color: #fff;
         font-weight: 600;
     }
-=======
+
 .footer {
     background-color: #000;
     color: #fff;
-<<<<<<< HEAD
->>>>>>> dd368ef5e26bea693adcd461cb960431f942a45b
+
 }
-=======
 }
->>>>>>> b2240c063c7fc6c8576a66c44d810c4886dad728

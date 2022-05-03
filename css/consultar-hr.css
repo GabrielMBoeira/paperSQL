@@ -115,6 +115,7 @@ caption{
 .cont-table{
     /* background-color: rgb(0, 0, 255); */
     max-width: 1100px;
+    width: 100%;
     height: 100vh;
     margin: auto;
     position: relative;
@@ -140,7 +141,7 @@ caption{
     animation-timing-function: ease-in-out;
     border: 1px solid white;
 }
-@media (max-width: 480px){
+@media (max-width: 790px){
     .back-table{
         /* position: absolute; */
         
