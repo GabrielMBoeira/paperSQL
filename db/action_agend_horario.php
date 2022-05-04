@@ -28,10 +28,10 @@ if (isset($_POST['salvar'])) {
 
     if ($stmt->execute()) { 
         $_SESSION['msg_agend_horario'] =  "<div class='alert alert-success fs-6' role='alert'>Cliente cadastrado!!!</div>";
-        header('location: ../agend_horario.php');
+        header('location: ../agendar.php');
     } else {
         $_SESSION['msg_agend_horario'] =  "<div class='alert alert-danger fs-6' role='alert'> Erro ao cadastrar!!!</div>";
-        header('location: ../agend_horario.php');
+        header('location: ../agendar.php');
     }
 
     $stmt->close();
