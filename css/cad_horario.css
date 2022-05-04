@@ -16,7 +16,7 @@ body {
 }
 
 main {
-    background-image: url('../images/wallpaper.png');
+    background-image: url('../images/criar_agenda.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -35,7 +35,6 @@ main {
     color: #fff;
     font-weight: 600;
 }
-
 
 button:hover {
     animation-name: hover_btn;
@@ -71,11 +70,8 @@ button:hover {
         color: #fff;
         font-weight: 600;
     }
-
-.footer {
-    background-color: #000;
-    color: #fff;
+    .footer {
+        background-color: #000;
+        color: #fff;
+    }
 }
-}
-
-

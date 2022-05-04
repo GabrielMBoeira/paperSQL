@@ -2,122 +2,83 @@
 require_once('template/header.php');
 ?>
 
+<link rel="stylesheet" href="css/consultar-hr.css">
 
-    <link rel="stylesheet" href="css/consultar-hr.css">
-
-
-    <div class="cont-table over">
+<main>
+    <div class="cont-table">
         <div class="back-table">
-        <div class="inputs">
-            <input class="ipt1" type="date" name="date" id="date" onchange="data()">
-            <input class="ipt2" type="time" name="time" id="time">
-            <input class="btn" type="button" value="Filtrar">
-        </div>
-            <table border="1" class="table-round-corner">
-                <caption>Horários</caption>
-                <tr>
-                    <td class="title">NOME</td>
-                    <td class="title">CPF</td>
-                    <td class="title">DATA</td>
-                    <td class="title">HORÁRIO</td>
-                </tr>
-                <tr>
-                    <td>Marcia souza</td>
-                    <td>123.456.789-10</td>
-                    <td>25-05-2022</td>
-                    <td>16:25</td>
-                </tr>
-                <!-- teste -->
-                <tr>
-                    <td>Marcia souza</td>
-                    <td>123.456.789-10</td>
-                    <td>25-05-2022</td>
-                    <td>16:25</td>
-                </tr>
-                <tr>
-                    <td>Marcia souza</td>
-                    <td>123.456.789-10</td>
-                    <td>25-05-2022</td>
-                    <td>16:25</td>
-                </tr>
-                <tr>
-                    <td>Marcia souza</td>
-                    <td>123.456.789-10</td>
-                    <td>25-05-2022</td>
-                    <td>16:25</td>
-                </tr>
-                <tr>
-                    <td>Marcia souza</td>
-                    <td>123.456.789-10</td>
-                    <td>25-05-2022</td>
-                    <td>16:25</td>
-                </tr>
-                <tr>
-                    <td>Marcia souza</td>
-                    <td>123.456.789-10</td>
-                    <td>25-05-2022</td>
-                    <td>16:25</td>
-                </tr>
-                <tr>
-                    <td>Marcia souza</td>
-                    <td>123.456.789-10</td>
-                    <td>25-05-2022</td>
-                    <td>16:25</td>
-                </tr>
-                <tr>
-                    <td>Marcia souza</td>
-                    <td>123.456.789-10</td>
-                    <td>25-05-2022</td>
-                    <td>16:25</td>
-                </tr>
-                <tr>
-                    <td>Marcia souza</td>
-                    <td>123.456.789-10</td>
-                    <td>25-05-2022</td>
-                    <td>16:25</td>
-                    <tr>
-                        <td>Marcia souza</td>
-                        <td>123.456.789-10</td>
-                        <td>25-05-2022</td>
-                        <td>16:25</td>
-                    </tr>
-                    <tr>
-                        <td>Marcia souza</td>
-                        <td>123.456.789-10</td>
-                        <td>25-05-2022</td>
-                        <td>16:25</td>
-                    </tr>
-                    <tr>
-                        <td>Marcia souza</td>
-                        <td>123.456.789-10</td>
-                        <td>25-05-2022</td>
-                        <td>16:25</td>
-                    </tr>
-                    <tr>
-                        <td>Marcia souza</td>
-                        <td>123.456.789-10</td>
-                        <td>25-05-2022</td>
-                        <td>16:25</td>
-                    
-                <!-- teste -->
-                <tfoot>
-                    <tr>
-                        <td id="res" colspan="4" class="ft">
-                            Selecione Uma Data...
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
+            <div class="inputs">
+                <input class="ipt1" type="date" name="date" id="date" onchange="data()">
+                <input class="ipt2" type="time" name="time" id="time">
+                <input class="btn btn-primary" type="button" value="Filtrar">
+            </div>
+            <div class="table-responsive">
+                <table class="table text-light">
+                    <thead>
+                        <tr>
+                            <th scope="col">Data</th>
+                            <th scope="col">Horário</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">CPF</th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th valign="middle">21/12/2020</th>
+                            <td valign="middle">16:00</td>
+                            <td class="text-truncate" valign="middle">Eduardo da Silva</td>
+                            <td valign="middle">123.456.789.10</td>
+                            <th scope="col">
+                                <button class="btn btn-sm btn-success" valign="middle">Editar</button>
+                            </th>
+                            <th scope="col">
+                                <button class="btn btn-sm btn-danger" valign="middle">Excluir</button>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th valign="middle">21/12/2020</th>
+                            <td valign="middle">16:00</td>
+                            <td class="text-truncate" valign="middle">Eduardo da Silva</td>
+                            <td valign="middle">123.456.789.10</td>
+                            <th scope="col">
+                                <button class="btn btn-sm btn-success" valign="middle">Editar</button>
+                            </th>
+                            <th scope="col">
+                                <button class="btn btn-sm btn-danger" valign="middle">Excluir</button>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th valign="middle">21/12/2020</th>
+                            <td valign="middle">16:00</td>
+                            <td class="text-truncate" valign="middle">Eduardo da Silva</td>
+                            <td valign="middle">123.456.789.10</td>
+                            <th scope="col">
+                                <button class="btn btn-sm btn-success" valign="middle">Editar</button>
+                            </th>
+                            <th scope="col">
+                                <button class="btn btn-sm btn-danger" valign="middle">Excluir</button>
+                            </th>
+                        </tr>
+                        
+                       
+                       
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
+</main>
 
-    <script>
-        var dt = document.getElementById('date')
-        var res = document.getElementById('res')
-        function data(){
-            res.innerHTML = 'Horários Agendados do Dia: ' + dt.value
-        }
-    </script>
+<script>
+    var dt = document.getElementById('date')
+    var res = document.getElementById('res')
+
+    function data() {
+        res.innerHTML = 'Horários Agendados do Dia: ' + dt.value
+    }
+</script>
 
 </html>
 

@@ -3,7 +3,6 @@ session_start();
 require_once('template/header.php');
 ?>
 
-
 <link rel="stylesheet" href="css/cad_horario.css">
 
 <main>
@@ -15,7 +14,7 @@ require_once('template/header.php');
             }
         ?>
         <form id="frm"  method="post">
-            <div class="title-form col-md-12 d-flex justify-content-center align-itens-center fs-2">Cadastrar horário</div>
+            <div class="title-form col-md-12 d-flex justify-content-center align-itens-center fs-2">Criar Agenda</div>
             <div class="col-md-12 mt-4">
                 <label for="data" class="form-label">Data:</label>
                 <input type="date" class="form-control" name="data" id="data" placeholder="Insira uma data...">

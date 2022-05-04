@@ -16,7 +16,7 @@ body {
 }
 
 main {
-    background-image: url('../images/wallpaper.png');
+    background-image: url('../images/background-consular-hor.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -74,6 +74,16 @@ main {
     color: #fff;
     font-size: 3rem;
     font-weight: 900;
+}
+
+.clock-span {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button:hover {
@@ -144,5 +154,4 @@ button:hover {
     .clock {
         font-size: 2.5rem;
     }
-    
 }

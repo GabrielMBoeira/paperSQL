@@ -1,47 +1,32 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-
-.cont{
-    max-width: 800px;
-    height: 97vh;
-    margin: auto;
-    padding: 10px;
-    text-align: center;
-    /* position: relative; */
-    /* background-color: #4D96FF; */
-}
-
-.cont2{
+.cont2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     height: 400px;
     max-width: 400px;
     max-height: 400px;
     padding: 30px;
     margin: auto;
-
-    margin-top: calc(50vh - 200px);
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -200px 0 0 -220px; */
-
-
     text-align: center;
     border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.207);  
+    background-color: rgba(0, 0, 0, 0.207);
     backdrop-filter: blur(5px);
 }
-.cont3{
 
+.cont3 {
     width: 90%;
     margin: auto;
     display: flex;
     justify-content: space-between;
-    
 }
-.Text{
+
+.Text {
     width: 90%;
     padding: 10px;
     margin: 5px;
@@ -49,15 +34,16 @@
     border-radius: 10px;
     font-weight: bold;
 }
-.date{
+
+.date {
     margin-top: 5px;
     padding: 10px;
     border-radius: 10px;
     border: 1px transparent solid;
     font-weight: bold;
-
 }
-.marcar{
+
+.marcar {
     background-color: #4D96FF;
     color: white;
     font-weight: bold;
@@ -68,49 +54,57 @@
     border-radius: 10px;
     margin-top: 20px;
 }
-h1{
+
+h1 {
     color: white;
 }
-.background{
+
+.background {
     background-image: url(../images/background-agendar.jpg);
     background-size: cover;
     background-position: center center;
 }
-.dt-mgn{
+
+.dt-mgn {
     margin-right: 5px;
 }
 
-.marcar:hover{
+.marcar:hover {
     animation-name: hover_btn;
     animation-duration: 0.3s;
     transform: scale(1.05);
     animation-timing-function: ease-in-out;
     border: 1px solid white;
 }
-.marcar:active{
+
+.marcar:active {
     animation-name: hover_act;
     animation-duration: 0.3s;
     transform: scale(1);
     animation-timing-function: ease-in-out;
     border: 1px solid white;
 }
-@keyframes  hover_btn{
 
-    0%{
+@keyframes hover_btn {
+    0% {
         transform: scale(1);
     }
-    100%{
+    100% {
         transform: scale(1.05);
     }
-    
 }
-@keyframes  hover_act{
 
-    0%{
+@keyframes hover_act {
+    0% {
         transform: scale(1.05);
     }
-    100%{
+    100% {
         transform: scale(1);
     }
-    
+}
+
+@media (max-width: 960px) {
+    .cont2 {
+        width: 95%;
+    }
 }

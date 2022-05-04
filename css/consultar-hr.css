@@ -1,170 +1,101 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
-table{
-    width: 90%;
-    border-collapse: collapse;
-    margin: auto;
-    font-family: Arial, Helvetica, sans-serif;
-}
-td{
-    /* border: 1px solid black; */
-    padding: 10px;
-    text-align: center;  
-}
-tr:nth-child(even){
-    background-color: rgb(33, 37, 41);
-    color: white;
-}
-tr:nth-child(odd){
-    background-color: #2C3034;
-    color: white;
-}
-caption{
-    border: 1px solid black;
-    text-align: center;
-    padding: 8px;
-    background-color: rgb(44, 48, 52);
-    color: white;
-    /* border-radius: 10px 10px 0  0; */
-    
-}
-/* tfoot > tr > td {
-    border-radius: 0 0 10px 10px;
-} */
-.table-round-corner {
-    margin-top: 15px;
-    text-align: center;
-    overflow:hidden;
-    border-collapse:collapse;
-    border: solid rgb(46, 46, 46) 1px;
-    border-radius: 15px;
-}
-.ft{
-    background-color: rgb(44, 48, 52);
-    color: rgb(5, 5, 5);
-    color: white;
-}
-.title{
-    background-color: rgb(44, 48, 52);
-    color: rgb(255, 255, 255);
-    font-weight: bold;
+
+main {
+    background-image: url('../images/acessar_agenda.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.ipt1{
+.ipt1 {
     padding: 13px;
     font-weight: bold;
     border-radius: 10px;
     border: 1px transparent;
-    background-color: #2C3034;
-    color-scheme: dark;
-    color: white;
+    background-color: #fff;
+    color: rgb(14, 13, 13);
 }
-.ipt2{
+
+.ipt2 {
     padding: 12px;
     font-weight: bold;
     border-radius: 10px;
     border: 1px transparent;
-    background-color: #2C3034;
-    color-scheme: dark;
-    color: white;
+    background-color: #fff;
+    color: rgb(14, 13, 13);
 }
-.inputs{
-    text-align: center;
-    width: 70%;
-    margin: auto;
+
+.inputs {
     display: flex;
     justify-content: space-around;
-    /* background-color: aliceblue; */
-    
-}
-.btn{
-    padding: 10px 20px 10px 20px;
-    border-radius: 10px;
-    border: 1px transparent;
-    background-color: #4D96FF;
-    font-weight: bold;
-    color: white;
-
-}
-#background{
-    background-image: url(../images/background-consular-hor.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    width: 100wh;
-    height: 100vh;
+    margin-top: 15px;
 }
 
-.back-table{
-    /* position: absolute; */
-    
-    padding: 30px;
-    width: 70%;
-    border: 1px transparent;
+.cont-table {
+    width: 900px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.492);  
-    backdrop-filter: blur(4px);   
-    
-    position: absolute;
-    z-index: 99999999;
-    left: 50%; top: 50%;
-    transform: translate(-50%, -50%);
-}
-.cont-table{
-    /* background-color: rgb(0, 0, 255); */
-    max-width: 1100px;
-    width: 100%;
-    height: 100vh;
-    margin: auto;
-    position: relative;
-    /* background-color: #4D96FF; */
-
-}
-.over{
-    overflow-x: auto;
-    overflow-y: auto;
+    padding: 20px;
 }
 
+.table {
+    margin-top: 20px;
+}
 
-.btn:hover{
+.btn:hover {
     animation-name: hover_btn;
     animation-duration: 0.3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    border: 1px solid white;
+    box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.52);
 }
-.btn:active{
-    animation-name: hover_act;
-    animation-duration: 0.3s;
-    transform: scale(0.95);
-    animation-timing-function: ease-in-out;
-    border: 1px solid white;
+
+@keyframes hover_btn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
 }
-@media (max-width: 790px){
-    .back-table{
-        /* position: absolute; */
-        
-        width: 100%;
-        padding: 0;
-        padding-top: 10px;
-        overflow-x: auto;   
+
+@media (max-width: 960px) {
+    .cont-table {
+        width: 95%;
     }
-    table{
-        width: 100%;
+    .ipt1 {
+        font-weight: bold;
+        height: 40px;
+        width: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        font-size: 0.9rem;
+        border: 1px transparent;
+        background-color: #fff;
+        color: rgb(14, 13, 13);
     }
-    .table-round-corner {
-        border-radius: 0px;
-    }
-    .back-table{
-        height: 100%;
-        border-radius: 0px;
-        position: absolute;
-        z-index:0;
-        left: 50%; top: 0;
-        transform: translate(-50%, 0%);
-    }
-    .inputs{
-        width: 100%;
+    .ipt2 {
+        font-weight: bold;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        font-size: 0.9rem;
+        border: 1px transparent;
+        background-color: #fff;
+        color: rgb(14, 13, 13);
     }
 }
