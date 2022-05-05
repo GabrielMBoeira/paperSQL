@@ -5,10 +5,33 @@ require_once('template/header.php');
 
 $conn = Connection::connectionDB();
 
-$sql = "SELECT DISTINCT data FROM agenda order by data asc";
-$stmt = $conn->prepare($sql);
-$stmt->execute();
-$result = $stmt->get_result();
+if (isset($_GET['id'])) {
+
+    $id = htmlspecialchars($_GET['id']);
+    $id = mysqli_real_escape_string($conn, $id);
+
+    $sql = "select c.id, a.data, a.horario, c.nome, c.cpf
+            from cliente c
+            join agenda a
+                on c.fk_agenda_id = a.id
+            where c.id = ?";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('i', $id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+    } else {
+        echo "Não existe cadastro com esse ID " . $id;
+        die;
+    }
+} else {
+    $_SESSION['msg_agenda'] =  "<div class='alert alert-danger fs-6' role='alert'>Não há ID Informado</div>";
+}
+
+
 ?>
 
 <link rel="stylesheet" href="css/style-agendar.css">
@@ -19,20 +42,40 @@ $result = $stmt->get_result();
         <div class="cont">
             <div class="cont2">
                 <?php
-                if (isset($_SESSION['msg_agend_horario'])) {
-                    print_r($_SESSION['msg_agend_horario']);
-                    unset($_SESSION['msg_agend_horario']);
+                if (isset($_SESSION['msg_agenda'])) {
+                    print_r($_SESSION['msg_agenda']);
+                    unset($_SESSION['msg_agenda']);
                 }
                 ?>
-                <h1>Agendar Horário</h1> <br>
-                <input class="Text" type="text" name="nome" id="nome" placeholder="Nome">
-                <input class="Text" type="text" name="cpf" size="14" maxlength="14" onkeypress="mascara_cpf()" id="cpf" placeholder="CPF">
+                <h1>Editar Horário</h1> <br>
+                <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                <input class="Text" type="text" name="nome" id="nome" placeholder="Nome" value="<?= isset($row['nome']) ? $row['nome'] : "" ?>">
+                <input class="Text" type="text" name="cpf" size="14" maxlength="14" onkeypress="mascara_cpf()" id="cpf" placeholder="CPF" value="<?= isset($row['cpf']) ? $row['cpf'] : "" ?>">
                 <div class="cont3">
 
                     <select id="data" name="data" class="form-select date dt-mgn" onchange="ajax()">
-                        <option selected>Escolha uma data</option>
+                        <option selected value="<?= $row['data'] ?>">
+
+                            <?php
+                            if (isset($row['data'])) {
+                                $dataBr = date('d/m/Y', strtotime($row['data']));
+                                echo $dataBr;
+                            } else {
+                                echo 'Escolha uma data';
+                            }
+                            ?>
+
+                        </option>
 
                         <?php
+
+                        $conn = Connection::connectionDB();
+
+                        $sql = "SELECT DISTINCT data FROM agenda order by data asc";
+                        $stmt = $conn->prepare($sql);
+                        $stmt->execute();
+                        $result = $stmt->get_result();
+
                         if ($result->num_rows > 0) {
                             while ($data = $result->fetch_assoc()) {
                                 $dia = $data['data'];
@@ -48,11 +91,11 @@ $result = $stmt->get_result();
                     </select>
 
                     <select id="hora" name="hora" class="form-select date hora">
-                        <option id="optionId">Hora</option>
+                        <option id="optionId" value="<?= $row['horario'] ?>"><?= isset($row['horario']) ? $row['horario'] : "Hora" ?></option>
                     </select>
 
                 </div>
-                <button class="marcar" name="salvar" id="salvar" onclick="return verificar()">Marcar</button>
+                <button class="marcar" name="salvar" id="salvar" onclick="return verificar()">Salvar</button>
             </div>
         </div>
     </form>
@@ -93,7 +136,7 @@ $result = $stmt->get_result();
         }
 
         frm.method = "post"
-        frm.action = "db/action_agend_horario.php"
+        frm.action = "db/action_edit_cliente.php"
         frm.submit()
     }
 
