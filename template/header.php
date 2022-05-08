@@ -31,9 +31,9 @@
                             <a class="nav-link" aria-current="page" href="consultar-hr.php">Acessar agenda</a>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Digite seu nome..." aria-label="Search">
-                        <button class="btn  btn-sm btn-primary" type="submit">Pesquisar</button>
+                    <form class="d-flex" action="pesquisa.php" method="post">
+                        <input class="form-control me-2" type="search" name="nome" placeholder="Digite seu nome..." aria-label="Search">
+                        <button class="btn  btn-sm btn-primary" type="submit" name="pesquisa">Pesquisar</button>
                     </form>
                 </div>
             </div>

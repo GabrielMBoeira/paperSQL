@@ -41,7 +41,7 @@ main {
 
 .cont-table {
     width: 900px;
-    height: 400px;
+    min-height: 400px;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 15px;
     padding: 20px;

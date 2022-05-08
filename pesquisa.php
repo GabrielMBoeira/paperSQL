@@ -3,50 +3,30 @@ session_start();
 require_once('db/conexao.php');
 require_once('template/header.php');
 
+
 $conn = Connection::connectionDB();
 
 $dados = array();
 
-if (isset($_POST['filtrar'])) {
 
-    $filtrar   = htmlspecialchars($_POST['filtrar']);
-    $date      = htmlspecialchars($_POST['date']);
-    $time      = htmlspecialchars($_POST['time']);
+if (isset($_POST['pesquisa'])) {
 
-    $filtrar   = mysqli_real_escape_string($conn, $filtrar);
-    $date      = mysqli_real_escape_string($conn, $date);
-    $time      = mysqli_real_escape_string($conn, $time);
+    $nome = $_POST['nome'];
+    $nome = htmlspecialchars($nome);
+    $nome   = mysqli_real_escape_string($conn, $nome);
 
     $sql = "select c.id, a.data, a.horario, c.nome, c.cpf
                 from cliente c
                 join agenda a
                     on c.fk_agenda_id = a.id
-                where a.data = '$date' and a.horario = '$time'";
+                where c.nome like '%$nome%'";
 
     $result = $conn->query($sql);
 
     while ($row = $result->fetch_assoc()) {
         $dados[] = $row;
     }
-
-} else {
-
-    $sql = "select c.id, a.data, a.horario, c.nome, c.cpf
-                from cliente c
-                join agenda a
-                    on c.fk_agenda_id = a.id
-                order by a.data asc";
-
-    $stmt = $conn->prepare($sql);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
-    while ($row = $result->fetch_assoc()) {
-        $dados[] = $row;
-    }
-
-}
-
+} 
 
 ?>
 
