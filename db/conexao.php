@@ -1,11 +1,11 @@
 <?php
 class Connection
 {
-    public static function connectionDB($banco = 'heroku_afaee45df8121f9')
+    public static function connectionDB($banco = 'heroku_212b174f4f5c3ac')
     {
-        $servidor = 'us-cdbr-east-05.cleardb.net';
-        $usuario = 'bf39d95a717b31';
-        $senha = '4d38de20';
+        $servidor = 'us-cdbr-east-06.cleardb.net';
+        $usuario = 'b5b973d025ca87';
+        $senha = '68c61b57';
 
         $conn = new mysqli($servidor, $usuario, $senha, $banco);
 
